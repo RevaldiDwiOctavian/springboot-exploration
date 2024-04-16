@@ -1,6 +1,5 @@
 package com.example.api.demoapi.config;
 
-import com.example.api.demoapi.util.AuthEntryPointJwt;
 import com.example.api.demoapi.util.AuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
