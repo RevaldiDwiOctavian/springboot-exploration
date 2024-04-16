@@ -4,13 +4,10 @@ import com.example.api.demoapi.dto.request.LoginRequest;
 import com.example.api.demoapi.dto.request.RegisterRequest;
 import com.example.api.demoapi.dto.response.AuthResponse;
 import com.example.api.demoapi.dto.response.ResponseMessage;
-import com.example.api.demoapi.model.User;
 import com.example.api.demoapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RestControllerAdvice

@@ -22,8 +22,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.text.MessageFormat;
-import java.util.List;
 import java.util.Set;
 
 @Service
