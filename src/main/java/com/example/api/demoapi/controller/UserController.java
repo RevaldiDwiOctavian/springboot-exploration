@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RestControllerAdvice
-@RequestMapping("/api/auth/user")
+@RequestMapping("/api/auth")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -24,5 +24,10 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
         return  userService.login(request);
+    }
+
+    @GetMapping("/home")
+    public void home() {
+
     }
 }
