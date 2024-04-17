@@ -13,4 +13,5 @@ public class ResponseMessage {
     private String message;
     private int statusCode;
     private String status;
+    private Object data;
 }

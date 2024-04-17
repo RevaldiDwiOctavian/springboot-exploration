@@ -47,14 +47,14 @@ public class UserService {
                 String message = constraintViolation.getMessage();
                 return ResponseEntity
                         .badRequest()
-                        .body(new ResponseMessage(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase()));
+                        .body(new ResponseMessage(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null));
             }
 
             if (userRepository.findByUsername(request.getUsername()) != null) {
                 String message = "Username already exist";
                 return ResponseEntity
                         .badRequest()
-                        .body(new ResponseMessage(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase()));
+                        .body(new ResponseMessage(message, HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null));
 
             }
 
@@ -70,11 +70,11 @@ public class UserService {
 
             return ResponseEntity
                     .ok()
-                    .body(new ResponseMessage(message, HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase()));
+                    .body(new ResponseMessage(message, HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase(), null));
 
         }catch (Exception e) {
             String message = e.getMessage();
-            return ResponseEntity.internalServerError().body(new ResponseMessage(message, HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase()));
+            return ResponseEntity.internalServerError().body(new ResponseMessage(message, HttpStatus.INTERNAL_SERVER_ERROR.value(), HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(), null));
         }
     }
 
