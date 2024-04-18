@@ -6,6 +6,7 @@ import com.example.api.demoapi.model.Product;
 import com.example.api.demoapi.repository.ProductRepository;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
@@ -20,6 +21,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
+@Slf4j
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;
